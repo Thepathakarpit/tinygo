@@ -234,7 +234,7 @@ gen-device-rp: build/gen-device-svd
 	GO111MODULE=off $(GO) fmt ./src/device/rp
 
 gen-device-renesas: build/gen-device-svd
-	./build/gen-device-svd -source=https://github.com/tinygo-org/renesas-svd lib/renesas-svd/ src/device/renesas/
+	./build/gen-device-svd -source=https://github.com/cmsis-svd/cmsis-svd-data/tree/master/data/Renesas lib/cmsis-svd/data/Renesas/ src/device/renesas/
 	GO111MODULE=off $(GO) fmt ./src/device/renesas
 
 $(LLVM_PROJECTDIR)/llvm:
